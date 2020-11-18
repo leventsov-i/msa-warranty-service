@@ -3,9 +3,7 @@ package ru.bmtsu.warrantly.entity;
 import lombok.*;
 import ru.bmtsu.warrantly.utils.WarrantyStatus;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.UUID;
 
@@ -15,6 +13,7 @@ import java.util.UUID;
 @Builder
 public class Warranty {
     @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "comment", length = 1024)
