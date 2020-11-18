@@ -35,7 +35,7 @@ public class WarrantyController {
     public ResponseEntity start(@PathVariable UUID item) {
         warrantyService.createWarranty(item);
         return ResponseEntity
-                .status(HttpStatus.OK)
+                .status(HttpStatus.NO_CONTENT)
                 .build();
     }
 
@@ -51,7 +51,7 @@ public class WarrantyController {
     public ResponseEntity<OrderWarrantyDTO> warranty(@PathVariable UUID item, @RequestBody ItemWarrantyDTO itemWarranty) {
         OrderWarrantyDTO orderWarrantyDTO = warrantyService.warranty(item, itemWarranty);
         return ResponseEntity
-                .status(HttpStatus.NO_CONTENT)
+                .status(HttpStatus.OK)
                 .body(orderWarrantyDTO);
     }
 
