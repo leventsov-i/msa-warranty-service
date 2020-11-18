@@ -13,7 +13,8 @@ import ru.bmtsu.warrantly.service.WarrantyService;
 
 import java.util.UUID;
 
-@RestController("/api/v1/warranty")
+@RestController
+@RequestMapping("/api/v1/warranty")
 public class WarrantyController {
     private final WarrantyService warrantyService;
 
