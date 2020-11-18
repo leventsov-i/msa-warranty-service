@@ -1,14 +1,12 @@
 package ru.bmtsu.warrantly.controller.dto.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Getter
+@Setter
 public class ItemWarrantyDTO {
     private String reason;
     private Integer availableCount;
