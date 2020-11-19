@@ -13,3 +13,9 @@ spring:
       ddl-auto: ${POSTGRESQL_DDL_AUTO}
     show-sql: false
     database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+management:
+  endpoints:
+    web:
+      base-path: /manage
+    path-mapping:
+      health: /health
